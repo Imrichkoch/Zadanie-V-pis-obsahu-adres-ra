@@ -4,9 +4,13 @@ import java.io.File;
 
 public class ShowFoldersDemo {
 	
-	public static  void showMeDirectories(File [] files){
-		
-		for(File file:files){
+        public static  void showMeDirectories(File [] files){
+
+                if(files == null){
+                        return;
+                }
+
+                for(File file:files){
 		    
 			if(file.isDirectory()){ // file vo file poli je directory vtedy metoda zavola samu seba
 				System.out.println("DIR:"+file.getAbsolutePath());	
